@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent mt-4">
     <div class="container">
         <a class="navbar-brand d-flex flex-column font-weight-bolder ms-lg-0 ms-3 text-white" href="{{ route('dashboard') }}">
-            Soft UI Dashboard
-            <span>Laravel Livewire</span>
+            MESSIANIC
+            <span>ASSEMBLY OF YAHWEH</span>
         </a>
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
             data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
@@ -41,12 +41,6 @@
                         <i class="fas fa-key opacity-6  me-1"></i>
                         Sign In
                     </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav d-lg-block d-none">
-                <li class="nav-item">
-                    <a href="https://www.creative-tim.com/product/soft-ui-dashboard-laravel-livewire"
-                        class="btn btn-sm btn-round mb-0 me-1 bg-gradient-light" target="_blank">Free download</a>
                 </li>
             </ul>
         </div>

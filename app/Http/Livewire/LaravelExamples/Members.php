@@ -12,9 +12,8 @@ class Members extends Component
 
     public function mount()
     {
-        $this->members = Member::all()->toArray();
+        $this->members = member::all();
     }
-
     // Other methods...
 
     public function render()

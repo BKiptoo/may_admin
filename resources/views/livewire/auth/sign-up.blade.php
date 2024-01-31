@@ -1,14 +1,13 @@
   <section class="h-100-vh mb-8">
       <div class="page-header align-items-start section-height-50 pt-5 pb-11 m-3 border-radius-lg"
-          style="background-image: url('../assets/img/curved-images/curved14.jpg');">
+          style="background-image: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
           <span class="mask bg-gradient-dark opacity-6"></span>
           <div class="container">
               <div class="row justify-content-center">
                   <div class="col-lg-5 text-center mx-auto">
                       <h1 class="text-white mb-2 mt-5">{{ __('Welcome!') }}</h1>
                       <p class="text-lead text-white">
-                          {{ __('Use these awesome forms to login or create new account in your
-                          project for free.') }}
+                          {{ __('We love what YAHWEH love what YAHWEH loves and hate what HE hates') }}
                       </p>
                   </div>
               </div>

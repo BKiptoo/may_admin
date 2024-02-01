@@ -5,7 +5,7 @@
           <div class="container">
               <div class="row justify-content-center">
                   <div class="col-lg-5 text-center mx-auto">
-                      <h1 class="text-white mb-2 mt-5">{{ __('Welcome!') }}</h1>
+                      <h1 class="font-weight-bolder text-info text-gradient">Welcome to Messianic Assembly of Yahweh</h1>
                       <p class="text-lead text-white">
                           {{ __('We love what YAHWEH love what YAHWEH loves and hate what HE hates') }}
                       </p>
@@ -104,11 +104,21 @@
                               <div class="mb-3">
                                   <div class="@error('password') border border-danger rounded-3 @enderror">
                                       <input wire:model="password" type="password" class="form-control"
-                                          placeholder="Password" aria-label="Password"
-                                          aria-describedby="password-addon">
+                                             placeholder="Password" aria-label="Password"
+                                             aria-describedby="password-addon">
                                   </div>
                                   @error('password') <div class="text-danger">{{ $message }}</div> @enderror
                               </div>
+
+                              <div class="mb-3">
+                                  <div class="@error('password_confirmation') border border-danger rounded-3 @enderror">
+                                      <input wire:model="password_confirmation" type="password" class="form-control"
+                                             placeholder="Confirm Password" aria-label="Confirm Password"
+                                             aria-describedby="confirm-password-addon">
+                                  </div>
+                                  @error('password_confirmation') <div class="text-danger">{{ $message }}</div> @enderror
+                              </div>
+
                               <div class="form-check form-check-info text-left">
                                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
                                       checked>

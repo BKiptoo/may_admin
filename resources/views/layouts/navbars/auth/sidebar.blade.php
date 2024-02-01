@@ -125,7 +125,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Route::currentRouteName() == 'blogs' ? 'active' : '' }}" href="#">
+                <a class="nav-link {{ Route::currentRouteName() == 'blogs' ? 'active' : '' }}" href="{{route('blog')}}">
                     <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center"><svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>blog</title>
                             <g id="Basic-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

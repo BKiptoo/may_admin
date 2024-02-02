@@ -5,10 +5,7 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
-use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Notifications\Notifiable;
-
 
 class User extends Authenticatable
 {
@@ -19,8 +16,14 @@ class User extends Authenticatable
      *
      * @var array
      */
-
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'phone', // Added phone field
+        'location', // Added location field
+        'about', // Added about field
+    ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -40,4 +43,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // You can define relationships with other models here if needed
+    // Example:
+    // public function posts()
+    // {
+    //     return $this->hasMany(Post::class);
+    // }
 }

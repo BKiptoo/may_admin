@@ -6,6 +6,7 @@
             @include('layouts.navbars.guest.sign-up')
             {{ $slot }}
             @include('layouts.footers.guest.with-socials')
+
             {{-- If the user is authenticated on the static sign in or the login page --}}
         @elseif (in_array(request()->route()->getName(),['sign-in', 'login'],))
             @include('layouts.navbars.guest.login')
@@ -26,6 +27,8 @@
             @include('layouts.navbars.auth.nav')
             @include('components.plugins.fixed-plugin')
             {{ $slot }}
+            @include('sweetalert::alert')
+
             <main>
                 <div class="container-fluid">
                     <div class="row">
@@ -55,5 +58,6 @@
             </div>
         @endif
     @endguest
+    @include('sweetalert::alert')
 
 </x-layouts.base>

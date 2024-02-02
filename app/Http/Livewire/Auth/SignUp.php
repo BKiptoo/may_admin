@@ -10,20 +10,22 @@ class SignUp extends Component
 {
     public $name = '';
     public $email = '';
+    public $phone = ''; // Added phone_number property
     public $password = '';
-    public $password_confirmation = ''; // Add this line
+    public $password_confirmation = '';
 
     protected $rules = [
         'name' => 'required|min:3',
-        'email' => 'required|email:rfc,dns|unique:users',
+        'email' => 'required|email|unique:users',
+        'phone' => 'required', // Added validation for phone_number
         'password' => 'required|min:6',
-        'password_confirmation' => 'required|same:password', // Include password confirmation rule here
+        'password_confirmation' => 'required|same:password',
     ];
 
     public function mount()
     {
         if (auth()->user()) {
-            redirect('/dashboard');
+            return redirect('/dashboard');
         }
     }
 
@@ -34,6 +36,7 @@ class SignUp extends Component
         $user = User::create([
             'name' => $this->name,
             'email' => $this->email,
+            'phone' => $this->phone, // Added phone_number assignment
             'password' => Hash::make($this->password),
         ]);
 

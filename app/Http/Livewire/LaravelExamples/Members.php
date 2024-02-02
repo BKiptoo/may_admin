@@ -3,7 +3,7 @@
 
 namespace App\Http\Livewire\LaravelExamples;
 
-use App\Models\Member;
+use App\Models\User; // Import the User model
 use Livewire\Component;
 
 class Members extends Component
@@ -12,9 +12,21 @@ class Members extends Component
 
     public function mount()
     {
-        $this->members = member::all();
+        // Fetch users from the 'users' table
+        $this->members = User::all();
     }
-    // Other methods...
+
+    public function deleteUser($userId)
+    {
+        $user = User::find($userId);
+        if ($user) {
+            $user->delete();
+            // Re-fetch members after deletion
+            $this->members = User::all();
+            // Trigger SweetAlert
+            $this->dispatchBrowserEvent('deleted', ['message' => 'User deleted successfully!']);
+        }
+    }
 
     public function render()
     {

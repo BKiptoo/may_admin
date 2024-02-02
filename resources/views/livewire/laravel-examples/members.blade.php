@@ -54,7 +54,7 @@
                                         <a href="#" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Edit user">
                                             <i class="fas fa-user-edit text-secondary"></i>
                                         </a>
-                                        <a href="#" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Delete user">
+                                        <a href="#" wire:click="deleteUser({{ $member->id }})" class="mx-3" data-bs-toggle="tooltip" data-bs-original-title="Delete user">
                                             <i class="fas fa-trash text-secondary"></i>
                                         </a>
                                     </td>
@@ -68,3 +68,18 @@
         </div>
     </div>
 </div>
+
+<!-- Add this within your Livewire component's blade file -->
+<script>
+    import Swal from "sweetalert2";
+
+    document.addEventListener('DOMContentLoaded', function () {
+        Livewire.on('deleted', function (data) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: data.message,
+            });
+        });
+    });
+</script>

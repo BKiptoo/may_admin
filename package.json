@@ -20,7 +20,8 @@
         "sass-loader": "^12.4.0"
     },
     "dependencies": {
+        "async": ">=2.6.4",
         "perfect-scrollbar": "^1.5.5",
-        "async": ">=2.6.4"
+        "sweetalert2": "^11.10.4"
     }
 }

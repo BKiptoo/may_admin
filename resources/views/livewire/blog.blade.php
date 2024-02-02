@@ -13,7 +13,8 @@
                                         required
                                         wire:model.defer="form.category_id">
                                     <option value="">Select Category</option>
-                                    <option value="">Selection</option>
+                                    <option value="1">Category 1</option>
+                                    <option value="2">Category 2</option>
                                     <!-- Add your options dynamically here -->
                                 </select>
                             </div>

@@ -68,18 +68,3 @@
         </div>
     </div>
 </div>
-
-<!-- Add this within your Livewire component's blade file -->
-<script>
-    import Swal from "sweetalert2";
-
-    document.addEventListener('DOMContentLoaded', function () {
-        Livewire.on('deleted', function (data) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Success!',
-                text: data.message,
-            });
-        });
-    });
-</script>

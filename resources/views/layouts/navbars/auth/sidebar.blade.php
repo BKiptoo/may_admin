@@ -125,24 +125,43 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Route::currentRouteName() == 'blogs' ? 'active' : '' }}" href="{{route('blog')}}">
-                    <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center"><svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title>blog</title>
-                            <g id="Basic-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g id="Rounded-Icons" transform="translate(-1869.000000, -293.000000)" fill="#000000" fill-rule="nonzero">
-                                    <g id="Icons-with-opacity" transform="translate(1716.000000, 291.000000)">
-                                        <g id="blog" transform="translate(153.000000, 2.000000)">
-                                            <path d="M34.5,0 L13.5,0 C12.1192879,0 11,1.11928789 11,2.5 L11,45.5 C11,46.8807121 12.1192879,48 13.5,48 L34.5,48 C35.8807121,48 37,46.8807121 37,45.5 L37,2.5 C37,1.11928789 35.8807121,0 34.5,0 Z M14,4 L34,4 L34,7 L14,7 L14,4 Z M14,10 L34,10 L34,12 L14,12 L14,10 Z M14,16 L34,16 L34,18 L14,18 L14,16 Z M14,22 L34,22 L34,24 L14,24 L14,22 Z M14,28 L26,28 L26,30 L14,30 L14,28 Z M14,34 L34,34 L34,36 L14,36 L14,34 Z" id="Path"></path>
-                                        </g>
-                                    </g>
-                                </g>
+                <a class="nav-link {{ Route::currentRouteName() == 'blogs' ? 'active' : '' }}" data-bs-toggle="collapse" aria-expanded="false" href="#blogExamples">
+        <span class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+            <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>blog</title>
+                <g id="Basic-Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Rounded-Icons" transform="translate(-1869.000000, -293.000000)" fill="#000000" fill-rule="nonzero">
+                        <g id="Icons-with-opacity" transform="translate(1716.000000, 291.000000)">
+                            <g id="blog" transform="translate(153.000000, 2.000000)">
+                                <path d="M34.5,0 L13.5,0 C12.1192879,0 11,1.11928789 11,2.5 L11,45.5 C11,46.8807121 12.1192879,48 13.5,48 L34.5,48 C35.8807121,48 37,46.8807121 37,45.5 L37,2.5 C37,1.11928789 35.8807121,0 34.5,0 Z M14,4 L34,4 L34,7 L14,7 L14,4 Z M14,10 L34,10 L34,12 L14,12 L14,10 Z M14,16 L34,16 L34,18 L14,18 L14,16 Z M14,22 L34,22 L34,24 L14,24 L14,22 Z M14,28 L26,28 L26,30 L14,30 L14,28 Z M14,34 L34,34 L34,36 L14,36 L14,34 Z" id="Path"></path>
                             </g>
-                        </svg>
-
-                    </div>
-                    <span class="nav-link-text ms-1">Blogs</span>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </span>
+                    <span class="nav-link-text ms-1">Blogs <b class="caret"></b></span>
                 </a>
+                <div class="collapse" id="blogExamples">
+                    <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="sidenav-mini-icon text-xs"><i class="fas fa-list"></i></span>
+                                <span class="sidenav-normal"> List Blogs </span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('blog') }}">
+                                <span class="sidenav-mini-icon text-xs"><i class="fas fa-plus"></i></span>
+                                <span class="sidenav-normal"> Add Blog </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
             </li>
+
+
 
             <li class="nav-item">
                 <a class="nav-link {{ Route::currentRouteName() == 'media_gallery' ? 'active' : '' }}"

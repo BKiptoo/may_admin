@@ -47,7 +47,7 @@ class Blog extends Component
         // Optionally, you can add a message or redirect the user
         session()->flash('message', 'Blog added successfully!');
     }
-    public function render()
+    public function render(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('livewire.blog');
     }

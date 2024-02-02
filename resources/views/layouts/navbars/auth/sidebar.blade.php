@@ -145,23 +145,20 @@
                 <div class="collapse" id="blogExamples">
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="sidenav-mini-icon text-xs"><i class="fas fa-list"></i></span>
-                                <span class="sidenav-normal"> List Blogs </span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('blog') }}">
                                 <span class="sidenav-mini-icon text-xs"><i class="fas fa-plus"></i></span>
                                 <span class="sidenav-normal"> Add Blog </span>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="sidenav-mini-icon text-xs"><i class="fas fa-list"></i></span>
+                                <span class="sidenav-normal"> List Blogs </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>
-
-
 
             <li class="nav-item">
                 <a class="nav-link {{ Route::currentRouteName() == 'media_gallery' ? 'active' : '' }}"

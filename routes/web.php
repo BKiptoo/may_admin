@@ -45,7 +45,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/laravel-user-management', AdminList::class)->name('user-management');
     Route::get('/laravel-members', Members::class)->name('members');
     Route::get('/laravel-admins', AdminList::class)->name('admin');
-    Route::get('/blog', Blog::class)->name('blog');
+    Route::get('/blog/create', Blog::class)->name('create');
+    Route::get('/blog/list', Blog::class)->name('list');
 
 });
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+//use App\Models\Blog;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -9,7 +10,7 @@ class Blog extends Component
 {
     use WithFileUploads;
 
-    public array $form = [
+    public $form = [
         'category_id' => '',
         'name' => '',
         'tags' => '',
@@ -17,38 +18,35 @@ class Blog extends Component
         'photo' => '',
     ];
 
-    private static function create(array $array)
+    protected $rules = [
+        'form.category_id' => 'required',
+        'form.name' => 'required',
+        // Add validation rules for other form fields as needed
+    ];
+
+    public function submit()
     {
-    }
+        $this->validate();
 
-    public function submit(): void
-    {
-        // Validate the form data
-        $this->validate([
-            'form.category_id' => 'required',
-            'form.name' => 'required',
-            // Add validation rules for other form fields as needed
-        ]);
+        $this->storePhoto();
 
-        // Process form submission
-        // For example, create a new blog entry in the database
-        Blog::create([
-            'category_id' => $this->form['category_id'],
-            'name' => $this->form['name'],
-            'tags' => $this->form['tags'],
-            'description' => $this->form['description'],
-            // Handle file upload
-            'photo' => $this->form['photo']->store('photos', 'public'),
-        ]);
+        Blog::create($this->form);
 
-        // Clear the form after successful submission
         $this->reset('form');
 
-        // Optionally, you can add a message or redirect the user
         session()->flash('message', 'Blog added successfully!');
     }
-    public function render(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\Foundation\Application
+
+    private function storePhoto()
     {
-        return view('livewire.blog');
+        if (isset($this->form['photo'])) {
+            $this->form['photo'] = $this->form['photo']->store('photos', 'public');
+        }
+    }
+
+    public function render()
+    {
+        $blogs = Blog::all(); // Fetch all blogs from the database
+        return view('livewire.Blogs.list', ['blogs' => $blogs]);
     }
 }

@@ -145,13 +145,13 @@
                 <div class="collapse" id="blogExamples">
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('blog') }}">
+                            <a class="nav-link" href="{{ route('create') }}">
                                 <span class="sidenav-mini-icon text-xs"><i class="fas fa-plus"></i></span>
                                 <span class="sidenav-normal"> Add Blog </span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('list')}}">
                                 <span class="sidenav-mini-icon text-xs"><i class="fas fa-list"></i></span>
                                 <span class="sidenav-normal"> List Blogs </span>
                             </a>

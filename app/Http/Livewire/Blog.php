@@ -24,7 +24,7 @@ class Blog extends Component
         // Add validation rules for other form fields as needed
     ];
 
-    public function submit()
+    public function submit(): void
     {
         $this->validate();
 
@@ -37,7 +37,7 @@ class Blog extends Component
         session()->flash('message', 'Blog added successfully!');
     }
 
-    private function storePhoto()
+    private function storePhoto(): void
     {
         if (isset($this->form['photo'])) {
             $this->form['photo'] = $this->form['photo']->store('photos', 'public');

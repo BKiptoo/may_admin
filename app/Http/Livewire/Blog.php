@@ -47,6 +47,6 @@ class Blog extends Component
     public function render()
     {
         $blogs = Blog::all(); // Fetch all blogs from the database
-        return view('livewire.Blogs.list', ['blogs' => $blogs]);
+        return view('livewire.Blogs.create', ['blogs' => $blogs]);
     }
 }
